@@ -5,9 +5,4 @@ class Card
 		@suit = suit
 		@value = value
 	end
-
-	
-	# def value
-	# 	5
-	# end
 end
