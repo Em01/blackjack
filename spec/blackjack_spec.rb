@@ -3,7 +3,7 @@ require 'blackjack'
 describe Card do 
 
 	it "should have a suit" do 
-		expect(Card.new.suit).not_to be_nil!
+		expect(Card.new.suit).to be_nil
 	end
 
 	it "should have a value"
