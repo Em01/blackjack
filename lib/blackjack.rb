@@ -1,8 +1,9 @@
 class Card
 
-	attr_reader :suit
-	def intialize 
+	attr_reader :suit, :value
+	def initialize 
 		@suit = :clubs
+		@value = 10
 	end
 
 	
