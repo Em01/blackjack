@@ -1,6 +1,11 @@
 class Card
 
-	def value
-		5
+	def intialize 
 	end
+
+	def suit
+	end
+	# def value
+	# 	5
+	# end
 end
