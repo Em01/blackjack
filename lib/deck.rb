@@ -1,4 +1,12 @@
+require "card"
+
 class Deck
+	attr_reader :cards 
+
+	def initialize
+		@cards = Deck.build_cards
+	end
+
 	def self.build_cards
 		cards = []
 		[:clubs, :diamonds, :spades, :hearts].each do |suit|

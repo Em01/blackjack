@@ -1,5 +1,5 @@
 require 'card'
-require 'deck'
+
 
 describe Card do 
 
