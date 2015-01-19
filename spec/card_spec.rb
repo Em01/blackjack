@@ -1,4 +1,5 @@
-require 'blackjack'
+require 'card'
+require 'deck'
 
 describe Card do 
 

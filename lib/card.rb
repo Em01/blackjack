@@ -15,5 +15,7 @@ class Card
 
 	def to_s
 		"A-diamonds"
+		"#{@value}-#{suit}"
 	end
 end
+
