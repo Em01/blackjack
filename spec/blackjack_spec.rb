@@ -7,4 +7,9 @@ describe Card do
 		expect(card.suit).to eq (:clubs)
 		expect(card.value).to eq(10)
 	end 
+
+	it "should have a value of 10 for facecards" do 
+		card = Card.new(:hearts, "J")
+		expect(card.value).to eq(10)
+	end
 end
