@@ -12,4 +12,8 @@ class Card
 		return 11 if @value == "A"
 		return @value
 	end
+
+	def to_s
+		"A-diamonds"
+	end
 end

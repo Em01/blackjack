@@ -24,4 +24,9 @@ describe Card do
 		card = Card.new(:diamonds, "A")
 		expect(card.value).to eq(11)
 	end
+
+	it "should be formatted nicely" do 
+		card = Card.new(:diamonds, "A")
+		expect(card.to_s).to eq("A-diamonds")
+	end
 end
