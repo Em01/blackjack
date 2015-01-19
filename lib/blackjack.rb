@@ -8,8 +8,7 @@ class Card
 	end
 
 	def value
-		return 10 if value = "J"
-		#otherwise
+		return 10 if @value == "J" 
 		return @value
 	end
 end

@@ -9,7 +9,14 @@ describe Card do
 	end 
 
 	it "should have a value of 10 for facecards" do 
-		card = Card.new(:hearts, "J")
-		expect(card.value).to eq(10)
+		facecards = ["J", "Q", "K"]
+		facecards.each do |facecard|
+			card = Card.new(:hearts, facecard)
+			expect(card.value).to eq(10)
+		end
+	end
+	it "should have a value of 4 for the 4-clubs" do 
+		card = Card.new(:clubs, 4)
+		expect(card.value).to eq(4)
 	end
 end
