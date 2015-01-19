@@ -17,7 +17,7 @@ class Deck
 			cards << Card.new(suit, facecard)
 		end
 	end
-	cards
+	cards.shuffle
 end
 	#going to occur on the class as it is a class method and will execute once
 	#The idea of a deck needs to be able to build a deck
