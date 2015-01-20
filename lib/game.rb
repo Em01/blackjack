@@ -1,5 +1,6 @@
 require 'hand'
 
+
 class Game
 	attr_reader :player_hand, :dealer_hand
 	def initialize
