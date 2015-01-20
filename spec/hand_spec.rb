@@ -26,6 +26,14 @@ describe Hand do
 			hand.play_as_dealer(deck)
 			expect(hand.value).to eq(17)
 		end
-		it "should stop on 21"
+		it "should stop on 21" do 
+			deck = double(:deck, :cards => [Card.new(:clubs, 4), 
+											Card.new(:diamonds, 7),
+											Card.new(:clubs, "K")])
+			hand = Hand.new
+			2.times { hand.hit!(deck) }
+			hand.play_as_dealer(deck)
+			expect(hand.value).to eq(21)
+		end
 	end
 end

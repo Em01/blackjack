@@ -15,6 +15,8 @@ class Hand
 	end
 
 	def play_as_dealer(deck)
+		puts cards.inspect
+		puts "value #{value}"
 		if value < 16
 			hit!(deck)
 			play_as_dealer(deck)
