@@ -7,7 +7,7 @@ class Hand
 	end
 
 	def hit!(deck)
-		@cards << deck.cards.pop
+		@cards << deck.cards.shift
 	end
 
 	def value #need the sum of all the cards

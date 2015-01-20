@@ -10,6 +10,18 @@ describe Hand do
 		expect(hand.value).to eq (15)
 	end
 
+	it "should take from the top of the deck" do
+	club4 = Card.new(:clubs, 4)
+	diamond7 = Card.new(:diamonds, 7)
+	clubK = Card.new(:clubs, "K") 
+		
+	deck = double(:deck, :cards => [club4, diamond7, clubK])
+	hand = Hand.new
+	2.times { hand.hit!(deck) }
+	expect(hand.cards).to eq([club4, diamond7])
+
+	end
+
 	describe "#play_as_dealer" do 
 		it "should hit below 16" do 
 			deck = double(:deck, :cards => [Card.new(:clubs, 4), Card.new(:diamonds, 4), Card.new(:clubs, 2), Card.new(:hearts, 6)])
