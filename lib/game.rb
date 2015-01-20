@@ -16,6 +16,11 @@ class Game
 		@player_hand.hit!(@deck)
 	end
 
+	def stand
+		@dealer_hand.play_as_dealer
+		determine_winner
+	end
+
 	def status
 		{:player_cards => @player_hand.cards, 
 		 :player_value => @player_hand.value,

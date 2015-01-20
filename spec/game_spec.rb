@@ -19,4 +19,10 @@ describe Game do
 	 	game.hit
 	 	expect(game.player_hand.cards.length).to eq(3)
 	 end
+
+	 it 'should play the dealer hand' do 
+	 	game = Game.new
+	 	game.stand
+	 	expect(game.status[:winner]).not_to be_nil
+	 end 
 end
