@@ -12,6 +12,10 @@ class Game
 		2.times { @dealer_hand.hit!(@deck)}
 	end
 
+	def hit
+		@player_hand.hit!(@deck)
+	end
+
 	def status
 		{:player_cards => @player_hand.cards, 
 		 :player_value => @player_hand.value,
