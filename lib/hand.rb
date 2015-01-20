@@ -13,4 +13,10 @@ class Hand
 	def value #need the sum of all the cards
 		cards.inject(0) {|sum, card| sum += card.value }
 	end
+
+	def play_as_dealer(deck)
+		if value < 16
+			hit!(deck)
+		end
+	end
 end
