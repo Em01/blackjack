@@ -17,8 +17,8 @@ class Game
 	end
 
 	def stand
-		@dealer_hand.play_as_dealer
-		determine_winner
+		@dealer_hand.play_as_dealer(@deck)
+		#determine_winner
 	end
 
 	def status

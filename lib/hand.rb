@@ -17,6 +17,7 @@ class Hand
 	def play_as_dealer(deck)
 		if value < 16
 			hit!(deck)
+			play_as_dealer(deck)
 		end
 	end
 end
