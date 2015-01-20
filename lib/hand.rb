@@ -12,7 +12,7 @@ class Hand
 
 	def value #need the sum of all the cards
 		value = 0
-		@cards.each do |card|
+		cards.each do |card|
 			value += card.value
 		end
 		value
