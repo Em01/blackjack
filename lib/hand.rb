@@ -6,5 +6,6 @@ class Hand
 	end
 
 	def hit!(deck)
+		@cards << deck.cards.pop
 	end
 end
