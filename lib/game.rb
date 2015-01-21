@@ -18,7 +18,7 @@ class Game
 
 	def stand
 		@dealer_hand.play_as_dealer(@deck)
-		determine_winner
+		determine_winner(@player_hand.value, @dealer_hand.value)
 	end
 
 	def status
@@ -29,8 +29,12 @@ class Game
 	end
 
 	def determine_winner(player_value, dealer_value)#assuming that everyone has played at this point and sending in player value and dealer value
-	player_value = @player_hand.value
-	return :dealer if player_value > 21
-
+		return :dealer if player_value > 21
+		return :player if dealer_value > 21
+		if player_value > dealer_value
+			:player
+		else
+			:dealer
+		end
 	end
 end
