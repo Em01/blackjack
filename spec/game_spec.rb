@@ -25,4 +25,19 @@ describe Game do
 	 	game.stand
 	 	expect(game.status[:winner]).not_to be_nil
 	 end 
+
+	 describe "#determine_winner" do 
+	 	it "should have dealer win when player busts" do 
+	 		expect(Game.new.determine_winner(22, 15)).to eq(:dealer)
+	 	end
+	 	it "should have player win if dealer busts" do 
+	 		expect(Game.new.determine_winner(18, 22)).to eq(:player)
+	 	end
+	 	it "should have player win if player > dealer" do 
+	 		expect(Game.new.determine_winner(18, 16)).to eq(:player)
+	 	end
+	 	it "should have push if tie" do
+	 		expect(Game.new.determine_winner(16, 16)).to eq(:push)
+	 	end
+	 end
 end
