@@ -31,7 +31,9 @@ class Game
 	def determine_winner(player_value, dealer_value)#assuming that everyone has played at this point and sending in player value and dealer value
 		return :dealer if player_value > 21
 		return :player if dealer_value > 21
-		if player_value > dealer_value
+		if player_value == dealer_value
+			:push
+		elsif player_value > dealer_value
 			:player
 		else
 			:dealer
