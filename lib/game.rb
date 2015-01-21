@@ -1,5 +1,6 @@
 require 'hand'
-
+require 'deck'
+require 'card'
 
 
 class Game
@@ -39,5 +40,9 @@ class Game
 		else
 			:dealer
 		end
+	end
+
+	def inspect
+		status
 	end
 end
