@@ -18,14 +18,15 @@ class Game
 
 	def stand
 		@dealer_hand.play_as_dealer(@deck)
-		determine_winner(@player_hand.value, @dealer_hand.value)
+		@winner = determine_winner(@player_hand.value, @dealer_hand.value)
 	end
 
 	def status
 		{:player_cards => @player_hand.cards, 
 		 :player_value => @player_hand.value,
 		 :dealer_cards => @dealer_hand.cards,
-		 :dealer_value => @dealer_hand.value}
+		 :dealer_value => @dealer_hand.value,
+		 :winner => @winner}
 	end
 
 	def determine_winner(player_value, dealer_value)#assuming that everyone has played at this point and sending in player value and dealer value
